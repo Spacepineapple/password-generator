@@ -90,7 +90,15 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-  
+    let passwordLength = Number(prompt("How many characters should your password contain? Please enter a number between 10 and 64."));
+    while (passwordLength<10||passwordLength>64) {
+        passwordLength = prompt("Sorry, your password must contain between 10 and 64 characters /n How many characters should your password contain? Please enter a number between 10 and 64.")
+    }
+    let upperLetter = window.confirm("Should your password include upper case letters? Select ok for yes or cacncel for no.");
+    let lowerLetter = window.confirm("Should your password include lower case letters? Select ok for yes or cancel for no.");
+    let numeric = window.confirm("Should your password include numbers? Select ok for yes or cancel for no.");
+    let special = window.confirm("Should your password include special characters? Select ok for yes and cancel for no.");
+
   }
   
   // Function for getting a random element from an array
@@ -108,6 +116,7 @@ var specialCharacters = [
   
   // Write password to the #password input
   function writePassword() {
+    getPasswordOptions();
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
   
