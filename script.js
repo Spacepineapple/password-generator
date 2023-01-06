@@ -139,24 +139,25 @@ var specialCharacters = [
         passwordArray.push(getRandom(sourceArray));
         passwordLength--;
     }
+    return randomiseString(passwordArray);
   }  
 
-  function randomiseString(str) {
+  function randomiseString(arr) {
     let randomString = "";
-    let stringLength = str.length;
+    let stringLength = arr.length;
     while (stringLength>0) {
         let randomIndex = Math.floor(Math.random()*stringLength);
-        randomString+=str[randomIndex];
-        str.splice(randomIndex, 1);
-
+        randomString+=arr[randomIndex];
+        arr.splice(randomIndex, 1);
+        stringLength--;
     }
+    return randomString;
   }
   // Get references to the #generate element
   var generateBtn = document.querySelector('#generate');
   
   // Write password to the #password input
   function writePassword() {
-    getPasswordOptions();
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
   
