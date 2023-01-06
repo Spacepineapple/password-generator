@@ -127,12 +127,30 @@ var specialCharacters = [
     if (options[3] === true) {
         sourceArray = sourceArray.concat(numericCharacters);
         passwordArray.push(getRandom(numericCharacters));
+        passwordLength--;
     }
     if (options[4] === true) {
         sourceArray = sourceArray.concat(specialCharacters);
         passwordArray.push(getRandom(specialCharacters));
+        passwordLength--;
+    }
+
+    while (passwordLength>0) {
+        passwordArray.push(getRandom(sourceArray));
+        passwordLength--;
     }
   }  
+
+  function randomiseString(str) {
+    let randomString = "";
+    let stringLength = str.length;
+    while (stringLength>0) {
+        let randomIndex = Math.floor(Math.random()*stringLength);
+        randomString+=str[randomIndex];
+        str.splice(randomIndex, 1);
+
+    }
+  }
   // Get references to the #generate element
   var generateBtn = document.querySelector('#generate');
   
