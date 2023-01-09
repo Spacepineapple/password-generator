@@ -1,4 +1,4 @@
-# password-generator
+# Challenge 5 - Password Generator
 
 ## Table of Contents
 1. [URL](#url)
@@ -9,7 +9,8 @@
 
 ## URL <a id="url"></a>
 
-A live version of this page has been deployed at https://spacepineapple.github.io/password-generator/
+A live version of this page has been deployed at
+https://spacepineapple.github.io/password-generator/
 
 ## Description <a id="description"></a>
 
@@ -41,19 +42,32 @@ place certain restrictions on the passwords which could be generated:
    displayed in an alert or written to the page.
 
 On first opening index.html, the browser page should resemble the following,
-showing a heading, button and an empty window with no password:
-![Screenshot of initial window](./images/PasswordGeneratorInitial.png)
+showing a heading, button and an empty window with no password: ![Screenshot of
+initial window](./images/PasswordGeneratorInitial.png)
 
 Upon clicking on the button, a series of prompts should be seen which resemble
-the following:
-![Screenshot of prompt window](./images/PasswordPrompt.png)
+the following: ![Screenshot of prompt window](./images/PasswordPrompt.png)
 
 Finally, after completing all of the prompts the password generator should
-generate and display the password in the empty window:
-![Screenshot of generated password](./images/GeneratedPassword.png)
+generate and display the password in the empty window: ![Screenshot of generated
+password](./images/GeneratedPassword.png)
 
 ## Installation <a id="installation"></a>
 
+All of the required files are included in this repository and no installation
+should be required. The index.html file should render in any modern browser on
+both a desktop or mobile device. 
+
 ## Usage <a id="usage"></a>
 
+To use this password generator, simply click the provided button and fill in the
+prompts by typing a number in the provided textbox and selecting 'ok' or
+'cancel' for each of the prompts. Note that any user must select a password
+length between 10 and 64 characters inclusive and the user must also answer 'ok'
+to at least one question regarding the characters to be used.
+
 ## Credits <a id="credits"></a>
+
+This project was completed by myself -- Neal Reeves. The index.html file,
+style.css file and initial arrays and functions were provided by edX as part of
+their Front End Web Development bootcamp.
